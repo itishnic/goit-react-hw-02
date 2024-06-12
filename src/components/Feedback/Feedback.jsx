@@ -7,7 +7,7 @@ const Feedback = ({ value }) => {
         <p>Bad: {value.bad}</p>
         <p>Total: {value.good + value.neutral + value.bad}</p>
         <p>
-          Positive:
+          Positive: 
            {(value.good * 100) / (value.good + value.bad)
             ? Math.ceil((value.good * 100) / (value.good + value.bad))
             : ""}
