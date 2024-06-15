@@ -1,21 +1,25 @@
-const Feedback = ({ value }) => {
-  if (value.good + value.neutral + value.bad)
-    return (
-      <div>
-        <p>Good: {value.good}</p>
-        <p>Neutral: {value.neutral}</p>
-        <p>Bad: {value.bad}</p>
-        <p>Total: {value.good + value.neutral + value.bad}</p>
-        <p>
-          Positive: 
-           {(value.good * 100) / (value.good + value.bad)
-            ? Math.ceil((value.good * 100) / (value.good + value.bad))
-            : ""}
-           %
-        </p>
-      </div>
-    );
-  else return <p>No feedback yet</p>;
+
+  
+
+
+
+const Feedback = ({ buttonsCount, totalFeedback, positiveFeedback }) => {
+  return (
+    <div>
+      {totalFeedback ? (
+        <>
+          <p>Good: {buttonsCount.good} </p>
+          <p>Neutral: {buttonsCount.neutral} </p>
+          <p>Bad: {buttonsCount.bad} </p>
+          <p>Total: {totalFeedback} </p>
+          <p>Positive: {positiveFeedback}%</p>
+        </>
+      ) : (
+        ""
+      )}
+    </div>
+  );
 };
 
-export default Feedback;
+export default Feedback
+
