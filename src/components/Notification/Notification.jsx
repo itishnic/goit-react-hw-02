@@ -1,12 +1,9 @@
+const Notification = () => {
+  return (
+    <div>
+      <p>No feedback yet</p>
+    </div>
+  );
+};
 
-
-const Notification = ({ totalFeedback }) => {
-    return (
-      <div>
-        {totalFeedback ? "" : <p>No feedback yet</p>}
-        {console.log(totalFeedback)}
-      </div>
-    );
-}
-
-export default Notification
+export default Notification;
