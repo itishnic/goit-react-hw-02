@@ -21,7 +21,7 @@ const App = () => {
 
   const [buttonsCount, setButtonsCount] = useState(() => {
     const savedCounts = localStorage.getItem("buttonCount");
-    return savedCounts ? JSON.parse(savedCounts) :buttonsState  ;
+    return savedCounts ? JSON.parse(savedCounts) : buttonsState  ;
   });
 
   const handleButtonClick = (buttonKey) => {
