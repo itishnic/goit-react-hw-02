@@ -20,7 +20,7 @@ const App = () => {
   };
 
   const [buttonsCount, setButtonsCount] = useState(() => {
-    const savedCounts = localStorage.getItem("buttonsCount");
+    const savedCounts = localStorage.getItem("buttonCount");
     return savedCounts ? JSON.parse(savedCounts) :JSON.parse(buttonsState)  ;
   });
 
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("buttonsCount", JSON.stringify(buttonsCount));
+    localStorage.setItem("buttonCount", JSON.stringify(buttonsCount));
   }, [buttonsCount]);
 
   const totalFeedback =
